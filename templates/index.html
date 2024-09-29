@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор стоимости недвижимости</title>
+</head>
+<body>
+    <h1>
+        Калькулятор стоимости недвижимости
+    </h1>
+
+<form method="post">
+    <p>
+        <label>Площадь квартиры</label>
+        <input type="text", name="area">
+    </p>
+    <input type="submit">
+</form>
+
+<p>
+    {% if message %}
+    {{message}}
+    {% endif %}
+</p>
+
+</body>
+</html>
