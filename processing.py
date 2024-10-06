@@ -1,6 +1,5 @@
 import pickle
 import numpy as np
-import sklearn
 
 
 def process(scaled_area):
