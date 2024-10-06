@@ -9,8 +9,12 @@ def index():
     message = ''
     if request.method == "POST":
         area = request.form.get("area")
-        cost = process(float(area))
-        message = f"Стоимость недвижимости {cost}"
+        try:
+            area = float(area)
+            cost = process(float(area))
+            message += f" Стоимость недвижимости {cost}"
+        except:
+            message += 'Некорректный ввод: '
 
     return render_template("index.html", message=message)
 
